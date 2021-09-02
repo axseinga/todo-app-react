@@ -1,9 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 class Todo extends React.Component {
     render() {
-        return <div>todo</div>;
+        return (
+            <li>
+                <p>{this.props.todo}</p>
+                <button>Edit</button>
+                <button onClick={this.props.removeTodo}>X</button>
+            </li>
+        );
     }
 }
 

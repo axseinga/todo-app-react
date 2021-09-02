@@ -1,16 +1,50 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import Todo from "./Todo";
 import NewTodoForm from "./NewTodoForm";
 
 class TodoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: [{ name: "walk the dog" }, { name: "milk the cat" }],
+            todos: [],
         };
+        this.addTodo = this.addTodo.bind(this);
+        this.removeTodo = this.removeTodo.bind(this);
     }
+
+    addTodo(todo) {
+        this.setState((state) => ({
+            todos: [...state.todos, todo],
+        }));
+    }
+
+    removeTodo(id) {
+        this.setState({
+            todos: this.state.todos.filter((todo) => todo.id !== id),
+        });
+    }
+
+    renderTodos() {
+        return (
+            <ul>
+                {this.state.todos.map((todo) => (
+                    <Todo
+                        key={todo.id}
+                        todo={todo.todo}
+                        removeTodo={() => this.removeTodo(todo.id)}
+                    />
+                ))}
+            </ul>
+        );
+    }
+
     render() {
-        return <NewTodoForm />;
+        return (
+            <div>
+                {this.renderTodos()}
+                <NewTodoForm addTodo={this.addTodo} />
+            </div>
+        );
     }
 }
 
