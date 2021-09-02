@@ -8,9 +8,15 @@
 .NewTodoForm-form {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.NewTodoForm-container {
     height: 40px;
     margin-top: 3px;
+    display: flex;
+    gap: 2px;
 }
 
 .NewTodoForm-heading {
@@ -21,6 +27,7 @@
 .NewTodoForm-input {
     width: 70%;
     border: 1px solid darkred;
+    justify-content: stretch;
 }
 
 .NewTodoForm-input::placeholder {
@@ -28,7 +35,7 @@
 }
 
 .NewTodoForm-btn {
-    width: 29%;
+    width: 30%;
     font-size: 0.5rem;
     font-weight: 600;
     text-transform: uppercase;

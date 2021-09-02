@@ -11,11 +11,12 @@ class TodoList extends React.Component {
         };
         this.addTodo = this.addTodo.bind(this);
         this.removeTodo = this.removeTodo.bind(this);
+        this.updateTodo = this.updateTodo.bind(this);
     }
 
-    addTodo(todo) {
+    addTodo(newTodo) {
         this.setState((state) => ({
-            todos: [...state.todos, todo],
+            todos: [...state.todos, newTodo],
         }));
     }
 
@@ -25,14 +26,26 @@ class TodoList extends React.Component {
         });
     }
 
+    updateTodo(id, updatedTodo) {
+        const updatedTodos = this.state.todos.map((todo) => {
+            if (todo.id === id) {
+                return { ...todo, todo: updatedTodo };
+            }
+            return todo;
+        });
+        this.setState({ todos: updatedTodos });
+    }
+
     renderTodos() {
         return (
             <ul className="TodoList-list">
                 {this.state.todos.map((todo) => (
                     <Todo
                         key={todo.id}
+                        id={todo.id}
                         todo={todo.todo}
                         removeTodo={() => this.removeTodo(todo.id)}
+                        updateTodo={this.updateTodo}
                     />
                 ))}
             </ul>

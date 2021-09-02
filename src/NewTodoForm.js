@@ -20,24 +20,26 @@ class NewTodoForm extends React.Component {
         e.preventDefault();
         const newTodo = { ...this.state, id: uuid() };
         this.props.addTodo(newTodo);
-        this.state.todo = "";
+        this.setState({ todo: "" });
     }
 
     render() {
         return (
             <div className="NewTodoForm">
-                <h2 className="NewTodoForm-heading">New Todo</h2>
                 <form className="NewTodoForm-form" onSubmit={this.handleSubmit}>
-                    <input
-                        className="NewTodoForm-input"
-                        placeholder="New Todo"
-                        type="text"
-                        name="todo"
-                        value={this.state.todo}
-                        id="todo"
-                        onChange={this.handleChange}
-                    ></input>
-                    <button className="NewTodoForm-btn">Add Todo</button>
+                    <label className="NewTodoForm-heading">New todo</label>
+                    <div className="NewTodoForm-container">
+                        <input
+                            className="NewTodoForm-input"
+                            placeholder="New Todo"
+                            type="text"
+                            name="todo"
+                            value={this.state.todo}
+                            id="todo"
+                            onChange={this.handleChange}
+                        ></input>
+                        <button className="NewTodoForm-btn">Add Todo</button>
+                    </div>
                 </form>
             </div>
         );
