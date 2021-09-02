@@ -1,0 +1,14 @@
+.Todo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+    background-color: plum;
+    padding: 1rem 2.5rem;
+    font-size: 0.8rem;
+}
+
+.Todo-btn {
+    padding: 0.1rem;
+    margin-left: 0.3rem;
+}
