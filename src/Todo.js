@@ -45,7 +45,7 @@ class Todo extends React.Component {
                             name="todo"
                             onChange={this.handleChange}
                         />
-                        <button>Save</button>
+                        <button className="Todo-btn-save">Save</button>
                     </form>
                 </div>
             );
@@ -60,13 +60,13 @@ class Todo extends React.Component {
                     </li>
                     <div className="Todo-btns-container">
                         <button className="Todo-btn" onClick={this.toggleForm}>
-                            Edit
+                            <i class="far fa-edit"></i>
                         </button>
                         <button
                             className="Todo-btn"
                             onClick={this.props.removeTodo}
                         >
-                            X
+                            <i class="far fa-trash-alt"></i>
                         </button>
                     </div>
                 </div>

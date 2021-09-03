@@ -73,6 +73,7 @@ class TodoList extends React.Component {
                     <p className="TodoList-desc">
                         A simple React Todo List App.
                     </p>
+                    <span className="TodoList-span"></span>
                 </div>
                 {this.renderTodos()}
                 <NewTodoForm addTodo={this.addTodo} />

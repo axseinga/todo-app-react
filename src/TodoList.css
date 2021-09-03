@@ -1,10 +1,11 @@
 .TodoList {
-    background-color: pink;
+    background-color: #05386b;
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
 }
 
 .TodoList-list {
@@ -26,4 +27,14 @@
 
 .TodoList-desc {
     font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+.TodoList-span {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    height: 1px;
+    background-color: #8ee4af;
+    width: 145%;
 }

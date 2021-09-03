@@ -8,14 +8,15 @@ html,
 body {
     background: linear-gradient(
             130deg,
-            #69b7eb 0%,
-            #a7cbe9 25%,
-            #b3dbd3 50%,
-            #f4d6db 75%,
-            #d8bdd8 100%
+            #379683 0%,
+            #5cdb95 25%,
+            #8ee4af 50%,
+            #edf5e1 75%,
+            #fffcf2 100%
         )
         no-repeat center center fixed;
     font-size: 1.1rem;
+    color: #edf5e1;
     font-family: "Quicksand", sans-serif;
     height: 100%;
 }
