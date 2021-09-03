@@ -8,7 +8,33 @@
     font-size: 0.8rem;
 }
 
+.Todo-edit {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    background-color: plum;
+    padding: 1rem 2.5rem;
+    font-size: 0.8rem;
+}
+
+.Todo-edit-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Todo-edit-input {
+    height: 25px;
+    width: 70%;
+}
+
 .Todo-btn {
     padding: 0.1rem;
     margin-left: 0.3rem;
+}
+
+.completed {
+    color: lightgrey;
+    text-decoration: line-through;
 }
